@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asunción Consulting | Security Manager</title>
+<style>
+:root{--bg:#f3f6fb;--panel:#fff;--ink:#172338;--muted:#718096;--line:#e5ebf3;--nav:#101d33;--blue:#2864e8;--cyan:#16b8b0;--green:#15976a;--amber:#d88a16;--red:#d84b55;--shadow:0 8px 28px #20304b0c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+.layout{display:flex;min-height:100vh}.sidebar{width:250px;background:var(--nav);color:#d9e4f5;padding:24px 16px;display:flex;flex-direction:column;gap:26px}
+.brand{display:flex;gap:12px;align-items:center;padding:4px 8px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#2e77ff,#16b8b0);display:grid;place-items:center;color:white;font-weight:900;font-size:19px}.brand strong{display:block;font-size:14px;color:white}.brand small{color:#91a3bf;font-size:11px}
+.navlabel{font-size:10px;letter-spacing:1.4px;color:#7185a4;padding:0 10px;text-transform:uppercase}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#aebdd3;text-align:left;padding:11px 12px;border-radius:9px;cursor:pointer;font:inherit;display:flex;gap:12px;align-items:center}.nav button:hover,.nav button.active{background:#203553;color:#fff}.nav .ico{width:19px;text-align:center;font-size:16px}.sidebottom{margin-top:auto;background:#1a2b46;padding:14px;border-radius:12px;font-size:12px;color:#aebdd3}.sidebottom b{color:#fff;display:block;margin-bottom:4px}
+main{flex:1;min-width:0}.topbar{height:72px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 34px}.crumb{color:var(--muted);font-size:13px}.user{display:flex;align-items:center;gap:10px;font-weight:600}.avatar{background:#e7efff;color:#2456bd;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;font-size:12px}
+.content{max-width:1400px;margin:auto;padding:30px 34px 50px}.pagehead{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:24px}.eyebrow{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.pagehead h1{font-size:26px;margin:5px 0 4px;letter-spacing:-.6px}.sub{color:var(--muted);margin:0}.btn{border:0;border-radius:9px;padding:10px 15px;font-weight:700;cursor:pointer;background:var(--blue);color:#fff;font:inherit}.btn:hover{filter:brightness(.96)}.btn.secondary{background:#edf2fa;color:#31435e}.btn.green{background:var(--green)}.btn.danger{background:#fff0f0;color:var(--red)}.btn.small{padding:7px 10px;font-size:12px}
+.grid{display:grid;gap:16px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:19px;box-shadow:var(--shadow)}.stat{display:flex;justify-content:space-between;align-items:flex-start}.stat .label{color:var(--muted);font-size:12px;font-weight:600}.stat .value{font-size:27px;font-weight:800;margin-top:8px;letter-spacing:-1px}.stat .hint{font-size:11px;color:var(--green);margin-top:3px}.staticon{width:38px;height:38px;border-radius:11px;background:#edf3ff;color:var(--blue);display:grid;place-items:center;font-size:18px}
+.two{grid-template-columns:1.4fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.card h3{margin:0 0 4px;font-size:15px}.muted{color:var(--muted)}.cardhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.pill{display:inline-flex;align-items:center;gap:5px;border-radius:30px;padding:4px 9px;font-size:11px;font-weight:700;background:#eaf8f2;color:var(--green)}.pill.warn{background:#fff5e5;color:#ad6b0a}.pill.info{background:#edf3ff;color:#285bc1}.pill.red{background:#fff0f0;color:var(--red)}
+.barrow{display:flex;justify-content:space-between;font-size:12px;margin:14px 0 6px}.bar{height:8px;border-radius:20px;background:#edf1f7;overflow:hidden}.bar span{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.activity{display:grid;gap:14px}.event{display:flex;gap:11px;align-items:flex-start}.dot{width:9px;height:9px;border-radius:50%;background:var(--green);margin-top:5px;box-shadow:0 0 0 4px #eaf8f2}.dot.blue{background:var(--blue);box-shadow:0 0 0 4px #edf3ff}.event b{display:block;font-size:12px}.event small{color:var(--muted)}
+.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:520px}th{text-align:left;color:var(--muted);font-size:10px;letter-spacing:.8px;text-transform:uppercase;padding:10px;border-bottom:1px solid var(--line)}td{padding:13px 10px;border-bottom:1px solid #eff2f7;font-size:12px}tr:last-child td{border-bottom:0}
+.section{display:none}.section.active{display:block}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:700;color:#43516a}.field input,.field select,.field textarea{width:100%;border:1px solid #dce4ef;border-radius:8px;padding:10px 11px;font:inherit;background:#fff;color:var(--ink)}.field textarea{min-height:85px;resize:vertical}.full{grid-column:1/-1}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.notice{padding:13px 15px;border-radius:10px;background:#eef5ff;border:1px solid #d9e7ff;color:#35517f;font-size:12px;margin:14px 0}.notice.warn{background:#fff8eb;border-color:#f6e2bb;color:#855a17}.notice.good{background:#edfaf4;border-color:#d1f0e0;color:#176d4f}
+.rule{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rulebox{border:1px solid var(--line);border-radius:12px;padding:17px;text-align:center}.rulebox .num{font-size:27px;font-weight:900;color:var(--blue)}.rulebox b{display:block;margin:3px 0}.rulebox small{color:var(--muted)}
+.filebox{border:1.5px dashed #cbd6e5;border-radius:12px;padding:20px;text-align:center;background:#fafcff}.filebox input{max-width:100%}
+.empty{text-align:center;padding:28px;color:var(--muted)}.toast{position:fixed;bottom:22px;right:22px;background:#172338;color:white;padding:12px 17px;border-radius:10px;box-shadow:0 8px 30px #0002;display:none;z-index:10}
+.footer{margin-top:25px;color:#98a3b4;font-size:11px;text-align:center}
+@media(max-width:950px){.sidebar{width:205px}.stats{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.content{padding:24px}}
+@media(max-width:650px){.layout{display:block}.sidebar{width:100%;padding:12px;gap:10px}.brand{padding:0 5px}.nav{display:flex;overflow:auto}.navlabel,.sidebottom{display:none}.nav button{white-space:nowrap;padding:8px 10px;font-size:12px}.topbar{height:54px;padding:0 16px}.content{padding:20px 14px}.pagehead{display:block}.pagehead .btn{margin-top:12px}.stats{gap:9px}.card{padding:15px}.stat .value{font-size:23px}.formgrid,.three{grid-template-columns:1fr}.rule{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+ <div class="brand"><div class="logo">AC</div><div><strong>ASUNCIÓN CONSULTING</strong><small>SECURITY MANAGER</small></div></div>
+ <div><div class="navlabel">MENÚ PRINCIPAL</div><nav class="nav">
+ <button class="active" data-tab="dashboard"><span class="ico">▦</span> Panel general</button>
+ <button data-tab="clientes"><span class="ico">♙</span> Clientes</button>
+ <button data-tab="cifrado"><span class="ico">▣</span> Cifrado de datos</button>
+ <button data-tab="backups"><span class="ico">⟳</span> Gestión de backups</button>
+ <button data-tab="incidentes"><span class="ico">⚑</span> Incidentes</button>
+ </nav></div>
+ <div class="sidebottom"><b>● Sistema operativo</b>Prototipo académico · Tema 5 TIC<br>Unidad VII · Seguridad de la Información</div>
+</aside>
+<main>
+ <header class="topbar"><div class="crumb">Espacio de trabajo / <b id="crumb">Panel general</b></div><div class="user"><div class="avatar">TA</div><span>Administrador</span></div></header>
+ <div class="content">
+ <section class="section active" id="dashboard">
+  <div class="pagehead"><div><div class="eyebrow">Centro de control</div><h1>Panel de seguridad</h1><p class="sub">Supervisión de la información contable y los respaldos de la firma.</p></div><button class="btn" onclick="runBackup()">＋ Ejecutar backup</button></div>
+  <div class="grid stats">
+   <div class="card stat"><div><div class="label">Clientes registrados</div><div class="value" id="sClients">40</div><div class="hint">Cartera de referencia</div></div><div class="staticon">♙</div></div>
+   <div class="card stat"><div><div class="label">Archivos cifrados</div><div class="value" id="sEncrypted">0</div><div class="hint">Cifrados desde este navegador</div></div><div class="staticon">▣</div></div>
+   <div class="card stat"><div><div class="label">Respaldos realizados</div><div class="value" id="sBackups">0</div><div class="hint">Historial de esta sesión</div></div><div class="staticon">⟳</div></div>
+   <div class="card stat"><div><div class="label">Incidentes abiertos</div><div class="value" id="sIncidents">0</div><div class="hint">Pendientes de revisión</div></div><div class="staticon">⚑</div></div>
+  </div>
+  <div class="grid two">
+   <div class="card"><div class="cardhead"><div><h3>Estado de protección</h3><small class="muted">Controles principales de seguridad</small></div><span class="pill">Monitoreo activo</span></div>
+    <div class="barrow"><b>Confidencialidad</b><span>Protección mediante cifrado</span></div><div class="bar"><span style="width:90%"></span></div>
+    <div class="barrow"><b>Integridad</b><span>Control de copias</span></div><div class="bar"><span style="width:82%"></span></div>
+    <div class="barrow"><b>Disponibilidad</b><span>Respaldos local y remoto</span></div><div class="bar"><span style="width:76%"></span></div>
+    <div class="notice">La triada CIA representa los tres pilares: confidencialidad, integridad y disponibilidad de la información.</div>
+   </div>
+   <div class="card"><div class="cardhead"><div><h3>Actividad reciente</h3><small class="muted">Movimientos del sistema</small></div></div><div class="activity" id="activity"><div class="event"><span class="dot blue"></span><div><b>Sistema iniciado</b><small>Panel listo para operar</small></div></div></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="cardhead"><div><h3>Regla de backup 3-2-1</h3><small class="muted">Estrategia recomendada para la firma contable</small></div><span class="pill info">Política de respaldo</span></div><div class="rule">
+   <div class="rulebox"><div class="num">3</div><b>Copias de datos</b><small>Original + dos respaldos</small></div>
+   <div class="rulebox"><div class="num">2</div><b>Medios diferentes</b><small>Disco interno y externo/NAS</small></div>
+   <div class="rulebox"><div class="num">1</div><b>Copia fuera del sitio</b><small>Nube o ubicación externa</small></div>
+  </div></div>
+ </section>
+ <section class="section" id="clientes">
+  <div class="pagehead"><div><div class="eyebrow">Administración</div><h1>Clientes contables</h1><p class="sub">Registro de clientes y clasificación de sus documentos.</p></div><button class="btn" onclick="document.getElementById('clientForm').scrollIntoView({behavior:'smooth'})">＋ Nuevo cliente</button></div>
+  <div class="card"><div class="cardhead"><h3>Listado de clientes</h3><span class="pill info" id="clientCount">0 registros</span></div><div class="tablewrap"><table><thead><tr><th>Cliente / Empresa</th><th>RUC</th><th>Documentos</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="clientRows"></tbody></table></div></div>
+  <div class="card" id="clientForm" style="margin-top:16px"><h3>Registrar cliente</h3><div class="formgrid" style="margin-top:14px"><div class="field"><label>Nombre o razón social</label><input id="cName" placeholder="Ej. Empresa Demo S.A."></div><div class="field"><label>RUC</label><input id="cRuc" placeholder="80000000-0"></div><div class="field"><label>Documentos gestionados</label><select id="cDocs"><option>IVA / Libros contables</option><option>Balance y estados financieros</option><option>Liquidación de impuestos</option><option>Documentación completa</option></select></div><div class="field"><label>Estado</label><select id="cStatus"><option>Protección pendiente</option><option>Protegido</option></select></div></div><div class="actions"><button class="btn" onclick="addClient()">Guardar cliente</button></div></div>
+ </section>
+ <section class="section" id="cifrado">
+  <div class="pagehead"><div><div class="eyebrow">Confidencialidad</div><h1>Cifrado de datos</h1><p class="sub">Protegé archivos contables antes de almacenarlos o compartirlos.</p></div><span class="pill">AES-256-GCM</span></div>
+  <div class="notice good">Esta herramienta realiza cifrado real en el navegador mediante Web Crypto API (AES-GCM de 256 bits). La contraseña no se envía a ningún servidor. Usá una contraseña robusta y guardala en un lugar seguro.</div>
+  <div class="grid two">
+   <div class="card"><h3>Proteger un archivo</h3><p class="muted">Seleccioná un documento contable para generar una versión cifrada (.acenc).</p><div class="filebox" style="margin:16px 0"><div style="font-size:28px">⇧</div><b>Seleccionar archivo</b><p class="muted">PDF, Excel, Word u otro documento</p><input type="file" id="encryptFile"></div><div class="field"><label>Contraseña de cifrado</label><input id="encPass" type="password" placeholder="Mínimo 12 caracteres"></div><div class="actions"><button class="btn" onclick="encryptFile()">Cifrar archivo</button></div><p class="muted" id="encResult" style="font-size:12px"></p></div>
+   <div class="card"><h3>Recuperar un archivo</h3><p class="muted">Descifrá un archivo .acenc generado por este sistema.</p><div class="filebox" style="margin:16px 0"><div style="font-size:28px">⇩</div><b>Seleccionar archivo cifrado</b><p class="muted">Archivo con extensión .acenc</p><input type="file" id="decryptFile"></div><div class="field"><label>Contraseña de descifrado</label><input id="decPass" type="password" placeholder="Ingresá la contraseña original"></div><div class="actions"><button class="btn green" onclick="decryptFile()">Descifrar y recuperar</button></div><p class="muted" id="decResult" style="font-size:12px"></p></div>
+  </div>
+  <div class="notice warn"><b>Importante:</b> si olvidás la contraseña, no será posible recuperar el archivo. Probá primero con documentos no sensibles. El cifrado protege el archivo descargado, pero no cifra automáticamente todo el equipo.</div>
+ </section>
+ <section class="section" id="backups">
+  <div class="pagehead"><div><div class="eyebrow">Disponibilidad e integridad</div><h1>Gestión de respaldos</h1><p class="sub">Controlá copias locales, externas y en la nube.</p></div><button class="btn" onclick="runBackup()">＋ Generar respaldo</button></div>
+  <div class="grid three">
+   <div class="card"><div class="cardhead"><h3>Cobian Reflector</h3><span class="pill info">Local</span></div><p class="muted">Copia programada hacia disco externo o servidor de red.</p><b>Frecuencia propuesta</b><p class="muted">Lunes a viernes · 19:00 hs</p><div class="bar"><span style="width:85%"></span></div></div>
+   <div class="card"><div class="cardhead"><h3>Duplicati</h3><span class="pill info">Nube</span></div><p class="muted">Copia cifrada y programada hacia Google Drive u otro destino compatible.</p><b>Frecuencia propuesta</b><p class="muted">Diaria · nocturna</p><div class="bar"><span style="width:90%"></span></div></div>
+   <div class="card"><div class="cardhead"><h3>Política 3-2-1</h3><span class="pill">Recomendada</span></div><p class="muted">Una copia original, dos respaldos y una copia externa.</p><b>Retención sugerida</b><p class="muted">Verificar restauración periódicamente</p><div class="bar"><span style="width:100%"></span></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="cardhead"><div><h3>Crear respaldo descargable</h3><small class="muted">Exporta los registros de este prototipo en un archivo JSON.</small></div></div><div class="notice">Este respaldo incluye clientes, historial de backups e incidentes registrados en el navegador. No incluye los archivos cifrados que descargaste por separado.</div><div class="actions"><button class="btn" onclick="exportBackup()">Descargar copia JSON</button><label class="btn secondary" for="restoreInput">Restaurar copia JSON</label><input id="restoreInput" type="file" accept=".json,application/json" style="display:none" onchange="restoreBackup(event)"></div><div id="backupResult" class="muted" style="font-size:12px;margin-top:10px"></div></div>
+  <div class="card" style="margin-top:16px"><div class="cardhead"><h3>Historial de respaldos</h3><span class="pill info" id="backupCount">0 ejecuciones</span></div><div class="tablewrap"><table><thead><tr><th>Fecha y hora</th><th>Tipo</th><th>Resultado</th><th>Detalle</th></tr></thead><tbody id="backupRows"></tbody></table></div></div>
+ </section>
+ <section class="section" id="incidentes">
+  <div class="pagehead"><div><div class="eyebrow">Gestión de riesgos</div><h1>Registro de incidentes</h1><p class="sub">Documentá eventos que puedan comprometer la información.</p></div></div>
+  <div class="grid two">
+   <div class="card"><h3>Registrar incidente</h3><div class="formgrid" style="margin-top:14px"><div class="field full"><label>Descripción</label><input id="iDesc" placeholder="Ej. Correo sospechoso recibido"></div><div class="field"><label>Tipo</label><select id="iType"><option>Phishing</option><option>Acceso no autorizado</option><option>Pérdida de dispositivo</option><option>Fallo de hardware</option><option>Ransomware / malware</option><option>Otro</option></select></div><div class="field"><label>Prioridad</label><select id="iPriority"><option>Media</option><option>Alta</option><option>Baja</option></select></div></div><div class="actions"><button class="btn" onclick="addIncident()">Registrar evento</button></div></div>
+   <div class="card"><h3>Buenas prácticas de respuesta</h3><div class="activity" style="margin-top:15px"><div class="event"><span class="dot"></span><div><b>1. Identificar</b><small>Registrar qué ocurrió, cuándo y qué sistema afecta.</small></div></div><div class="event"><span class="dot blue"></span><div><b>2. Contener</b><small>Aislar el equipo o cuenta comprometida.</small></div></div><div class="event"><span class="dot"></span><div><b>3. Recuperar</b><small>Verificar respaldos y restaurar información confiable.</small></div></div><div class="event"><span class="dot blue"></span><div><b>4. Documentar</b><small>Registrar acciones y medidas preventivas.</small></div></div></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="cardhead"><h3>Eventos registrados</h3><span class="pill warn" id="incidentCount">0 abiertos</span></div><div class="tablewrap"><table><thead><tr><th>Fecha</th><th>Descripción</th><th>Tipo</th><th>Prioridad</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="incidentRows"></tbody></table></div></div>
+ </section>
+ <div class="footer">ASUNCIÓN CONSULTING · PROYECTO ACADÉMICO TIC · TEMA 5 · UNIVERSIDAD NACIONAL DE ASUNCIÓN</div>
+ </div>
+</main>
+</div><div class="toast" id="toast"></div>
+<script>
+const KEY='ac_security_manager_v1';
+let db=JSON.parse(localStorage.getItem(KEY)||'null')||{clients:[],backups:[],incidents:[],encrypted:0,activity:[]};
+function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.style.display='block';setTimeout(()=>t.style.display='none',2800)}
+function log(title,detail){db.activity.unshift({title,detail});db.activity=db.activity.slice(0,8)}
+function dateNow(){return new Date().toLocaleString('es-PY')}
+function render(){
+ document.getElementById('sClients').textContent=40+db.clients.length;
+ document.getElementById('sEncrypted').textContent=db.encrypted;
+ document.getElementById('sBackups').textContent=db.backups.length;
+ document.getElementById('sIncidents').textContent=db.incidents.filter(x=>x.status==='Abierto').length;
+ document.getElementById('clientCount').textContent=db.clients.length+' registros';
+ document.getElementById('clientRows').innerHTML=db.clients.length?db.clients.map((x,i)=>`<tr><td><b>${esc(x.name)}</b></td><td>${esc(x.ruc)}</td><td>${esc(x.docs)}</td><td><span class="pill ${x.status==='Protegido'?'':'warn'}">${esc(x.status)}</span></td><td><button class="btn danger small" onclick="removeClient(${i})">Eliminar</button></td></tr>`).join(''):'<tr><td colspan="5" class="empty">Todavía no hay clientes agregados.</td></tr>';
+ document.getElementById('backupCount').textContent=db.backups.length+' ejecuciones';
+ document.getElementById('backupRows').innerHTML=db.backups.length?db.backups.map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.type)}</td><td><span class="pill">${esc(x.status)}</span></td><td>${esc(x.detail)}</td></tr>`).join(''):'<tr><td colspan="4" class="empty">No hay respaldos registrados.</td></tr>';
+ document.getElementById('incidentCount').textContent=db.incidents.filter(x=>x.status==='Abierto').length+' abiertos';
+ document.getElementById('incidentRows').innerHTML=db.incidents.length?db.incidents.map((x,i)=>`<tr><td>${esc(x.date)}</td><td><b>${esc(x.desc)}</b></td><td>${esc(x.type)}</td><td><span class="pill ${x.priority==='Alta'?'red':'warn'}">${esc(x.priority)}</span></td><td>${esc(x.status)}</td><td>${x.status==='Abierto'?`<button class="btn secondary small" onclick="resolveIncident(${i})">Resolver</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="6" class="empty">No hay incidentes registrados.</td></tr>';
+ document.getElementById('activity').innerHTML=db.activity.length?db.activity.map((x,i)=>`<div class="event"><span class="dot ${i%2?'blue':''}"></span><div><b>${esc(x.title)}</b><small>${esc(x.detail)}</small></div></div>`).join(''):'<div class="muted">Sin actividad reciente.</div>';
+}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');document.getElementById('crumb').textContent=b.textContent.trim()}));
+function addClient(){let name=cName.value.trim(),ruc=cRuc.value.trim();if(!name||!ruc)return toast('Completá nombre y RUC.');db.clients.push({name,ruc,docs:cDocs.value,status:cStatus.value});log('Cliente registrado',name);cName.value='';cRuc.value='';save();toast('Cliente agregado correctamente.')}
+function removeClient(i){if(confirm('¿Eliminar este cliente?')){db.clients.splice(i,1);save();toast('Cliente eliminado.')}}
+function addIncident(){let desc=iDesc.value.trim();if(!desc)return toast('Ingresá una descripción.');db.incidents.unshift({date:dateNow(),desc,type:iType.value,priority:iPriority.value,status:'Abierto'});log('Incidente registrado',desc);iDesc.value='';save();toast('Incidente registrado.')}
+function resolveIncident(i){db.incidents[i].status='Resuelto';log('Incidente resuelto',db.incidents[i].desc);save();toast('Incidente marcado como resuelto.')}
+function runBackup(){db.backups.unshift({date:dateNow(),type:'Backup de control',status:'Completado',detail:'Registro local de clientes, incidentes y actividad'});log('Backup de control completado',dateNow());save();toast('Respaldo de control registrado.')}
+function exportBackup(){let blob=new Blob([JSON.stringify({product:'Asunción Consulting Security Manager',createdAt:new Date().toISOString(),data:db},null,2)],{type:'application/json'});download(blob,'asuncion-consulting-backup-'+new Date().toISOString().slice(0,10)+'.json');document.getElementById('backupResult').textContent='Copia JSON descargada correctamente.';db.backups.unshift({date:dateNow(),type:'Exportación JSON',status:'Completado',detail:'Copia descargable de los registros'});log('Exportación de respaldo',dateNow());save()}
+function restoreBackup(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!x.data||!Array.isArray(x.data.clients)||!Array.isArray(x.data.backups))throw Error();if(confirm('La restauración reemplazará los datos actuales del prototipo. ¿Continuar?')){db=x.data;save();document.getElementById('backupResult').textContent='Datos restaurados correctamente.';toast('Restauración completada.')}}catch(err){toast('El archivo no es un respaldo válido.')}};r.readAsText(f);e.target.value=''}
+function download(blob,name){let a=document.createElement('a'),u=URL.createObjectURL(blob);a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}
+async function deriveKey(password,salt){let material=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:250000,hash:'SHA-256'},material,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function encryptFile(){let f=document.getElementById('encryptFile').files[0],p=document.getElementById('encPass').value,out=document.getElementById('encResult');if(!f)return toast('Seleccioná un archivo.');if(p.length<12)return toast('La contraseña debe tener al menos 12 caracteres.');if(!crypto.subtle)return toast('Tu navegador debe utilizar HTTPS para cifrar.');try{out.textContent='Cifrando…';let salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12)),key=await deriveKey(p,salt),plain=await f.arrayBuffer(),cipher=await crypto.subtle.encrypt({name:'AES-GCM',iv},key,plain);let meta=new TextEncoder().encode(JSON.stringify({name:f.name,type:f.type||'application/octet-stream',salt:Array.from(salt),iv:Array.from(iv)}));let mlen=new Uint8Array(4);new DataView(mlen.buffer).setUint32(0,meta.length);let packed=new Blob([new TextEncoder().encode('ACENC1'),mlen,meta,cipher],{type:'application/octet-stream'});download(packed,f.name+'.acenc');db.encrypted++;log('Archivo cifrado',f.name+' · AES-256-GCM');save();out.textContent='Archivo protegido y descargado: '+f.name+'.acenc';toast('Cifrado completado.')}catch(e){out.textContent='No se pudo cifrar el archivo.';toast('Error al cifrar.')}}
+async function decryptFile(){let f=document.getElementById('decryptFile').files[0],p=document.getElementById('decPass').value,out=document.getElementById('decResult');if(!f||!p)return toast('Seleccioná el archivo y escribí la contraseña.');try{out.textContent='Descifrando…';let a=new Uint8Array(await f.arrayBuffer());if(new TextDecoder().decode(a.slice(0,6))!=='ACENC1')throw Error();let n=new DataView(a.buffer,a.byteOffset+6,4).getUint32(0),meta=JSON.parse(new TextDecoder().decode(a.slice(10,10+n))),key=await deriveKey(p,new Uint8Array(meta.salt)),plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:new Uint8Array(meta.iv)},key,a.slice(10+n));download(new Blob([plain],{type:meta.type}),meta.name);out.textContent='Archivo recuperado: '+meta.name;log('Archivo descifrado',meta.name);save();toast('Descifrado completado.')}catch(e){out.textContent='No se pudo descifrar. Verificá la contraseña y el archivo.';toast('Contraseña incorrecta o archivo dañado.')}}
+render();
+</script>
+</body></html>
